@@ -1,0 +1,35 @@
+@{
+  ViewData["Title"] = "Order";
+}
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Make an order</title>
+      
+</head>
+<body>
+    <div>
+        <h3>Form for order</h3>
+        <p>Fill those fields</p>
+        <form method="post">
+            <input type="hidden" value="@ViewBag.AppId" name="AppId" />
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="UserName" /> </td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="text" name="Email" /></td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td><input type="text" name="Balance" /></td>
+                </tr>
+                <tr><td><input type="submit" value="Send" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
