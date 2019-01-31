@@ -1,0 +1,46 @@
+@model IEnumerable<AppStore.Models.App>
+@{
+    ViewData["Title"] = "List of Apps";
+  //  Layout = null;
+}
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <title>App Store</title>
+    <style>
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  height: 50px;
+}
+</style>
+</head>
+<body>
+    <h3>Apps</h3>
+    <table>
+        <tr>
+            <td>Name: </td>
+            <td>Price: </td>
+            <td>Rating: </td>
+            <td>Action: </td>
+        </tr>
+        @foreach (var app in Model)
+            {
+            <tr>
+                <td>@app.AppName</td>
+                <td>@app.AppPrice</td>
+                <td>@app.AppRating</td>
+                <td><a href="~/AppStore/Buy/@app.AppId">buy</a></td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
